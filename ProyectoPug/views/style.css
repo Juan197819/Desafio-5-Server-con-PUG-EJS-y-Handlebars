@@ -1,0 +1,42 @@
+*{
+    text-decoration: none;
+    color: black
+}
+
+
+body{
+    background-color: rgba(127, 255, 212, 0.315);
+}
+
+h1{
+    color:rgb(4, 4, 165)
+}
+table,th,td{
+
+    border: 2px solid black;
+}
+table{
+    border-collapse:collapse;
+    margin: 30px auto;
+    width: 80%;
+    max-width:600px;
+    background-color: whitesmoke;
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.form{
+    align-items:flex-start;
+    justify-content: space-between;
+    height: 200px;
+}
+button{
+    margin:10px
+}
+button:hover{
+    background-color:grey
+}

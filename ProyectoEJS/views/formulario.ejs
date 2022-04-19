@@ -1,0 +1,20 @@
+<%- include('main') %>
+    <main class="flexCol">
+        <h1>Ingrese su producto</h1>
+        <form class="flexCol " action="/productos" method="POST">
+            <div class="flexCol form">
+                <label for="title">Nombre del producto</label>
+                <input type="text" required name="title" value="<%- ejemploDeProducto.title %>">
+                <label for="price">Precio</label>
+                <input type="text" required name="price" value="<%- ejemploDeProducto.price %>">
+                <label for="thumbnail">Foto URL</label>
+                <input type="text" required name="thumbnail" value="<%- ejemploDeProducto.thumbnail %>">
+            </div>
+            <button>Enviar</button>
+        </form>
+        <button>
+            <a href="/productos">Lista de productos</a>
+        </button>
+    </main>
+</body>
+</html>

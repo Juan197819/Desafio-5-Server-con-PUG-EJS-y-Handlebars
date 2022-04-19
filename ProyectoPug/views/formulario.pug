@@ -1,0 +1,23 @@
+doctype
+html(lang="en")
+        head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible", content="IE=edge")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            style
+                include style.css
+            title="Servidor con PUG"
+        body(class="flexCol")
+            main(class="flexCol")
+                h1="Ingrese su producto"
+                form(class="flexCol ", action="/productos", method="POST")
+                    div(class="flexCol form")
+                        label(for="title")="Nombre del producto"
+                        input(type="text", required, name="title", value=ejemploDeProducto.title)
+                        label(for="price")="Precio"
+                        input(type="text", required, name="price", value=ejemploDeProducto.price)
+                        label(for="thumbnail")="Foto URL"
+                        input(type="text", required, name="thumbnail", value=ejemploDeProducto.thumbnail)
+                    button="Enviar"
+                button
+                    a(href="/productos")="Lista de productos"

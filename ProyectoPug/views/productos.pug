@@ -1,0 +1,29 @@
+doctype
+html(lang="en")
+        head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible", content="IE=edge")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            style
+                include style.css
+            title="Servidor con PUG"
+        body(class="flexCol")
+            h1="Vista de productos"
+            if arrayProductos[0]
+                table(id="tabla")
+                    thead
+                        tr
+                            th="Nombre de producto" 
+                            th="Precio"
+                            th="Foto"
+                    tbody
+                        each product in arrayProductos
+                            tr
+                                td=product.title
+                                td=product.price
+                                td
+                                    img(width="50px", src=product.thumbnail, alt=product.title)
+            else
+                h3="No se encontraron productos"
+            button
+                a(href="/")="Ingresar productos"

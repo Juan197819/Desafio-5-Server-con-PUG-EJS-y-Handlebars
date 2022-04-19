@@ -1,0 +1,31 @@
+<%- include('main') %>
+<h1>Vista de productos</h1>
+
+<% if (arrayProductos[0]) { %>
+        <table id="tabla" >
+                <thead>
+                    <tr>
+                        <th>Nombre de producto</th>
+                        <th>Precio</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% arrayProductos.forEach(function(producto){ %>
+                    <tr>
+                        <td><%= producto.title %></td>
+                        <td><%= producto.price %></td>
+                        <td><img width="50px" height=""src="<%= producto.thumbnail %>" alt="<%= producto.title %>"> </td>
+                    </tr> 
+                    <% }); %>
+
+                </tbody>
+        </table>
+<% }else{ %>
+<h3>No se encontraron productos</h3>
+<% }; %>
+        <button>
+            <a href="/">Ingresar productos</a>
+        </button>
+        </body>
+    </html>

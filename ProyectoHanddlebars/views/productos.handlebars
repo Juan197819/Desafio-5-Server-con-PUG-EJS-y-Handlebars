@@ -1,0 +1,27 @@
+<h1>Vista de productos</h1>
+
+{{#if arrayProductos}}
+        <table id="tabla">
+                <thead>
+                    <tr>
+                        <th>Nombre de producto</th>
+                        <th>Precio</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+            {{#each arrayProductos}}
+                    <tr>
+                        <td>{{this.title}}</td>
+                        <td>{{this.price}}</td>
+                        <td><img width="50px" height=""src="{{this.thumbnail}}" alt="{{this.title}}"> </td>
+                    </tr> 
+            {{/each}}
+                </tbody>
+        </table>
+{{else}} 
+<h3>No se encontraron productos</h3>
+{{/if}}
+        <button>
+            <a href="/">Ingresar productos</a>
+        </button>
